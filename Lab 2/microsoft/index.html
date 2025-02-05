@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Microsoft</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border-radius: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-img-top {
+            border-radius: 0;
+        }
+
+        .navbar-brand {
+            margin-bottom: 10px;
+        }
+
+        .btn-primary.mt-auto {
+            border-radius: 0;
+        }
+
+        .container-fluid.prim-nav {
+            margin-left: 140px;
+        }
+
+        .r-cont {
+            margin-right: 30px;
+        }
+
+        .list-products{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .category {
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            text-decoration: underline;
+        }
+
+        .category img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .category a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="height:60px;">
+        <div class="container-fluid prim-nav">
+            <a class="navbar-brand" href="#">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBLoZC_9b_6CZT9WsMYzHZ7jFf8oeucvuUMA&s" alt="Logo" style="width:120px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse d-flex justify-content-between" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Microsoft 365</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Teams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Copilot</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Windows</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Surface</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Xbox</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Deals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Small Business</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Support</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown ms-auto r-cont">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">All Microsoft</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Software</a></li>
+                            <li><a class="dropdown-item" href="#">PCs & Devices</a></li>
+                            <li><a class="dropdown-item" href="#">Entertainment</a></li>
+                            <li><a class="dropdown-item" href="#">Business</a></li>
+                            <li><a class="dropdown-item" href="#">Developer & IT</a></li>
+                            <li><a class="dropdown-item" href="#">Other</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item r-cont">
+                        <a class="nav-link" href="#">Search 🔎</a>
+                    </li>
+                    <li class="nav-item r-cont">
+                        <a class="nav-link" href="#">Cart 🛒</a>
+                    </li>
+                    <li class="nav-item r-cont">
+                        <a class="nav-link" href="#">Sign in -></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary border-top" style="height:60px;">
+        <div class="container d-flex justify-content-center">
+            <a href="#" class="text-white fw-bold text-decoration-none">Pay your way, with flexible payment options available at checkout. Learn more ></a>
+        </div>
+    </nav>
+    
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        </div>
+    
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Surface-Laptop-AI-7Ed-Platinum-x86-13-006-Copilot-PC-Intel-COMMR:VP5-1920x600" alt="slide_1" class="d-block w-100">
+                <div class="carousel-caption" style="color:black; margin-bottom:175px; margin-right:800px;">
+                    <span class="badge bg-warning">New</span>
+                    <h2>Surface Pro for Business</h2>
+                    <p>This ultra-versatile Copilot+ PC, with new Intel® Core™ Ultra processors (Series 2), powers AI experiences that boost productivity and creativity.</p>
+                    <a href="#" class="btn btn-primary mt-auto w-50">Pre-order now</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Surface-Laptop-AI-7Ed-Platinum-x86-13-006-Copilot-PC-Intel-COMMR:VP5-1920x600" alt="slide_2" class="d-block w-100">
+                <div class="carousel-caption" style="color:black; margin-bottom:175px; margin-right:800px;">
+                    <span class="badge bg-warning">New</span>
+                    <h2>Surface Laptop for Business</h2>
+                    <p>Uncompromising power, all-day battery life,* and unique Copilot+ PC AI experiences—featuring Intel® Core™ Ultra processors (Series 2).</p>
+                    <a href="#" class="btn btn-primary mt-auto w-50">Pre-order now</a>
+                </div>
+            </div>
+        </div>
+    
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>            
+    
+    <div class="list-products">
+        <div class="category">
+            <img src="surface.svg" alt="Surface">
+            <a href="#">Shop Surface devices</a>
+        </div>
+        <div class="category">
+            <img src="xbox.svg" alt="Xbox">
+            <a href="#">Shop Xbox games and consoles</a>
+        </div>
+        <div class="category">
+            <img src="accesories.svg" alt="Accessories">
+            <a href="#">Shop for accessories</a>
+        </div>
+        <div class="category">
+            <img src="business.svg" alt="Business">
+            <a href="#">Shop for your business</a>
+        </div>
+        <div class="category">
+            <img src="pc.svg" alt="PC">
+            <a href="#">Find your next PC</a>
+        </div>
+        <div class="category">
+            <img src="365.svg" alt="Microsoft 365">
+            <a href="#">Choose your Microsoft 365</a>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card h-100 d-flex flex-column">
+                    <img class="card-img-top" src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Surface-Pro-AI-11Ed-Sapphire-MC001?wid=517&hei=293&fit=crop" alt="img_1">
+                    <div class="card-body d-flex flex-column">
+                        <h5>Surface Laptop, Copilot+ PC</h5>
+                        <p>Unlock AI features like Live Captions and Cocreator with this exceptionally powerful laptop.</p>
+                        <a href="#" class="btn btn-primary mt-auto w-50">Shop now</a>
+                    </div>
+                </div>
+            </div>    
+    
+            <div class="col-md-3">
+                <div class="card h-100 d-flex flex-column">
+                    <img class="card-img-top" src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-XSS-CP-Xbox-Series-S?wid=380&hei=213&fit=crop" alt="img_2">
+                    <div class="card-body d-flex flex-column">
+                        <h5>Xbox Series S</h5>
+                        <p>Next-gen performance in the smallest Xbox ever.</p>
+                        <a href="#" class="btn btn-primary mt-auto w-75">Shop Xbox Series S</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-3">
+                <div class="card h-100 d-flex flex-column">
+                    <img class="card-img-top" src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Xbox-Controller-Valentine-CP?wid=380&hei=213&fit=crop" alt="img_3">
+                    <div class="card-body d-flex flex-column">
+                        <h5>Xbox Controllers</h5>
+                        <p>Elite, wireless, adaptive—find the controller that fits your style of play.</p>
+                        <a href="#" class="btn btn-primary mt-auto w-50">Shop now</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-3">
+                <div class="card h-100 d-flex flex-column">
+                    <img class="card-img-top" src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/900822_Store_1668x940?wid=380&hei=213&fit=crop" alt="img_4">
+                    <div class="card-body d-flex flex-column">
+                        <h5>Xbox presents Developer_Direct</h5>
+                        <p>Tune in January 23 at 10 AM PT to hear directly from the developers.</p>
+                        <a href="#" class="btn btn-primary mt-auto w-50">Learn more</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

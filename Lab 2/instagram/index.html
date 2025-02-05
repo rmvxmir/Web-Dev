@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Instagram</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .left-side {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right-side {
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inst-temp {
+            margin-left: 300px;
+            margin-bottom: 100px;
+        }
+
+        .login-box {
+            max-width: 400px;
+            width: 100%;
+            max-height: 425px;
+            height: 100%;
+            margin-right: 300px;
+            margin-bottom: 260px;
+            padding: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .register-box {
+            margin-top: 30px;
+            margin-left: -15px;
+            padding: 5px;
+            font-size: 14px;
+            width: 400px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .app-download {
+            margin-top: 20px;
+        }
+
+        .inst-temp {
+            margin-bottom: 100px;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid #ccc;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid content">
+        <div class="row">
+            <div class="col-md-6 left-side">
+                <img class="inst-temp" src="inst_ss.png" alt="template" style="width:450px; height:650px;">
+            </div>
+    
+            <div class="col-md-6 right-side">
+                <div class="login-box">
+                    <img class="mx-auto d-block" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUtZ2q6Dr4ZP4zU01VfGffyc_u-z8vIY4BCA&s" alt="inst-logo" style="width:150px;">
+                    <br>
+                    <form>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Телефон, имя пользователя или эл. адрес">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" id="password" placeholder="Пароль">
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Войти</button>
+                        </div>
+                        <div class="divider text-center my-3">
+                            <span class="text-black">или</span>
+                        </div>                        
+                        <p class="text-black text-center" style="margin-top: 0px;"><img class="rounded" src="https://static.vecteezy.com/system/resources/previews/018/910/719/non_2x/facebook-logo-facebook-icon-free-free-vector.jpg" alt="fb-logo" style="width:40px;"><a class="text-blue fw-bold text-decoration-none" href="#">Войти через facebook</a></p>
+                        <p class="text-center mt-3"><a class="text-decoration-none" href="#">Забыли пароль?</a></p>
+                    </form>
+
+                    <div class="register-box text-center">
+                        <p class="text-black" style="margin-top:10px;">У вас еще нет аккаунта? <a class="text-decoration-none fw-bold" href="#">Зарегистрироваться</a></p> 
+                    </div>
+
+                    <div class="app-download text-center">
+                        <p class="text-black">Установите приложение:</p>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw25uYC3xZqqthe25--h6nSyvgvejU2CF5BA&s" alt="apple-store" style="width:145px; height:45px; margin-left:-10px;">
+                        <img src="https://obrkarta.ru/mobile/img/download-google-play.png" alt="google-play" style="width:150px; margin-left:15px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="text-center">
+            <p class="mb-0 text-muted" style="word-spacing: 10px;">
+                Meta
+                Информация
+                Блог
+                Вакансии
+                Помощь
+                API
+                Конфиденциальность
+                Условия
+                Места
+                Instagram Lite
+                Threads
+                Загрузка контактов и лица, не являющиеся пользователями
+                Meta Verified
+            </p>
+            <br>
+            <p class="mb-0 text-muted">© 2025 Instagram from Meta</p>
+        </footer>
+    </div>
+</body>
+</html>
