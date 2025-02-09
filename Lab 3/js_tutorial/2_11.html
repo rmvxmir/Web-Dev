@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<script>
+        if (age >= 14 && age <= 90);
+        
+        if (!(age >= 14 && age <= 90));
+        if (age < 14 || age > 90);
+
+        if (-1 || 0) alert( 'first' ); // Executes
+        if (-1 && 0) alert( 'second' ); // Does not execute
+        if (null || -1 && 1) alert( 'third' ); // Executes
+
+        let login = prompt("Who's there?", '');
+        if (login === null || login == '') {
+            alert("Canceled");
+        }
+        else if (login == "Admin") {
+            let password = prompt("Password?", '');
+            (password === null || password == '') ? alert("Canceled") :
+            (password == "TheMaster") ? alert("Welcome!") :
+            alert('Wrong password')
+        }
+        else {
+            alert("I don't know you")
+        }
+  	</script>
+</body>
+</html>

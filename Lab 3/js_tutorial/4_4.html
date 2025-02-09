@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<script>
+        let calculator = {
+			sum() {
+				return Number(this.a) + Number(this.b);
+			},
+			mul() {
+				return this.a * this.b;
+			},
+			read() {
+				this.a = prompt("Enter the number a:", '');
+				this.b = prompt("Enter the number b:", '');
+				this.a = Number(this.a);
+				this.b = Number(this.b);
+			}
+		};
+		calculator.read();
+		alert(calculator.sum());
+		alert(calculator.mul());
+
+		let ladder = {
+			step: 0,
+			up() {
+				this.step++;
+				return this;
+			},
+			down() {
+				this.step--;
+				return this;
+			},
+			showStep: function() {
+				alert( this.step );
+				return this;
+			}
+		};
+		ladder.up().up().down().showStep().down().showStep();
+  	</script>
+</body>
+</html>
