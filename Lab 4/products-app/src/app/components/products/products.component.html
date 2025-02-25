@@ -1,0 +1,31 @@
+<div class="container mt-4">
+	<div class="row">
+	  <div class="col-md-4" *ngFor="let product of products; let i = index">
+		<div class="card shadow-sm">
+		  <!-- Custom Image Slider -->
+		  <div class="carousel-container">
+			<img [src]="product.imageUrls[activeIndex[i]]" class="d-block w-10 mx-auto" alt="{{ product.name }}">
+  
+			<!-- Custom Controls -->
+			<button class="carousel-control-prev" (click)="prevImage(i)">
+			  <span class="carousel-control-prev-icon"></span>
+			</button>
+			<button class="carousel-control-next" (click)="nextImage(i)">
+			  <span class="carousel-control-next-icon"></span>
+			</button>
+		  </div>
+  
+		  <!-- Product Details -->
+		  <div class="card-body">
+			<h5 class="card-title">{{ product.name }}</h5>
+			<p class="card-text">{{ product.description }}</p>
+			<p class="card-text"><strong>Rating:</strong> ⭐ {{ product.rating }}</p>
+			<a [href]="product.link" target="_blank" class="btn btn-primary">View on Kaspi</a>
+			<button (click)="shareProductWhatsapp(product)" class="btn btn-success ms-2">Share WApp</button>
+			<button (click)="shareProductTelegram(product)" class="btn btn-success ms-2">Share TG</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</div>
+  
