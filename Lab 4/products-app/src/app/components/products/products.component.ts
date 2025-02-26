@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-products',
-  standalone: true,  // Important: This tells Angular it's a standalone component
-  imports: [CommonModule],  // <-- Add this to enable *ngFor and *ngIf
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent {
-  products = [
+  products: Product[] = [
     { 
       id: 1, 
       name: 'iPhone 15 Pro (Blue)', 
@@ -129,7 +130,7 @@ export class ProductsComponent {
       description: 'A stylish sport band.', 
       rating: 5.0, 
       link: 'https://kaspi.kz/shop/p/remeshok-apple-dlja-apple-watch-series-7-watch-series-8-45-mm-chernyi-106653134/?srsltid=AfmBOorilgR0rF5g3zkUOYSgER5oiUU3I40T5SWJGqlVLaRugdFeOf4p&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_performance_max_500k&gclid=Cj0KCQiA8fW9BhC8ARIsACwHqYqCmHg6ELGFQCN83fLw84ZJJ0ppUu4MkT_Oa_uOQQ6D21430OFhEeQaAp9nEALw_wcB' 
-    },
+    }
   ];
 
   activeIndex: number[] = this.products.map(() => 0);
@@ -152,7 +153,7 @@ export class ProductsComponent {
 
   shareProductWhatsapp(product: any) {
     const message = `Check out this product:`;
-    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message + ' ' + product.link)}`;
     window.open(whatsappUrl, '_blank');
   }
   shareProductTelegram(product: any) {
