@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-products',
-  standalone: true,  // Important: This tells Angular it's a standalone component
-  imports: [CommonModule],  // <-- Add this to enable *ngFor and *ngIf
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent {
   categories = ['Smartphones', 'Watches', 'Laptops', 'Accessories'];
-  selected = 'Smartphones';
+  selected = 'Not selected';
 
-  products = [
+  products: Product[] = [
     { 
       id: 1,
       category: 'Smartphones',
@@ -280,7 +281,7 @@ export class ProductsComponent {
       link: 'https://kaspi.kz/shop/p/apple-macbook-pro-14-2023-14-2-8-gb-ssd-512-gb-macos-mtl73-114877279/?m=Smarttimekz&utm_source=google&utm_medium=cpc&utm_campaign=shop_google_performance_max_500k&gad_source=1&gclid=Cj0KCQiA8fW9BhC8ARIsACwHqYqCmHg6ELGFQCN83fLw84ZJJ0ppUu4MkT_Oa_uOQQ6D21430OFhEeQaAp9nEALw_wcB' 
     },
     { 
-      id: 10, 
+      id: 20, 
       category: 'Accessories',
       name: 'Apple Watch Regular Band', 
       imageUrls: [
@@ -295,25 +296,24 @@ export class ProductsComponent {
     }
   ];
 
-  getfilteredProducts(){
-
+  getfilteredProducts() {
     var filtered = []
-    for(var i = 0; i < this.products.length;i++){
-      if(this.products[i].category === this.selected){
+    for (var i = 0; i < this.products.length; i++) {
+      if (this.products[i].category === this.selected){
         filtered.push(this.products[i]);
       }
     } 
     return filtered;
   }
 
-  selectCategory(event : any){
+  selectCategory(event : any) {
     this.selected = event.target.value;
   }
 
-  removeProduct(id : number){
+  removeProduct(id : number) {
     var newProducts = []
-    for(var i = 0; i < this.products.length;i++){
-      if(this.products[i].id !== id){
+    for(var i = 0; i < this.products.length; i++) {
+      if (this.products[i].id !== id) {
         newProducts.push(this.products[i]);
       }
     }
@@ -321,8 +321,8 @@ export class ProductsComponent {
   }
 
   likeProduct(id : number){
-    for(var i = 0; i < this.products.length;i++){
-      if(this.products[i].id === id){
+    for(var i = 0; i < this.products.length; i++) {
+      if (this.products[i].id === id) {
         this.products[i].likes += 1;
       }
     }
@@ -348,7 +348,7 @@ export class ProductsComponent {
 
   shareProductWhatsapp(product: any) {
     const message = `Check out this product:`;
-    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message + ' ' + product.link)}`;
     window.open(whatsappUrl, '_blank');
   }
   shareProductTelegram(product: any) {

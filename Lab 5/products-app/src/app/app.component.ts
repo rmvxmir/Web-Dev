@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { NgFor, NgIf } from '@angular/common';
-import { ProductsComponent } from './components/products/products.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgFor, NgIf, ProductsComponent], // Import Angular directives and child component
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
