@@ -46,6 +46,13 @@ def company_delete(request, id):
     company.delete()
     return Response(status=status.HTTP_204_NO_CONTENT)
 
+@api_view(['GET'])
+def vacancies_by_company(request, id):
+    company = Company.objects.get(id=id)
+    vacancies = company.vacancies.all()
+    serializer = VacancySerializer(vacancies, many=True)
+    return Response(serializer.data)
+
 # CBVs for Vacancy model
 class VacancyListCreate(generics.ListCreateAPIView):
     queryset = Vacancy.objects.all()

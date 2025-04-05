@@ -1,0 +1,8 @@
+<ul style="list-style: none; padding: 0;">
+    <li *ngFor="let v of vacancies" style="border: 1px solid #ccc; border-radius: 8px; padding: 10px; margin-bottom: 10px; background-color: #f9f9f9;">
+      <h3 style="margin: 0 0 5px;">{{ v.name }}</h3>
+      <p style="margin: 0 0 8px;">{{ v.description }}</p>
+      <p style="margin: 0; font-weight: bold;">💰 Salary: {{ v.salary }}</p>
+    </li>
+</ul>
+  

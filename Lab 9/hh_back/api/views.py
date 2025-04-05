@@ -4,8 +4,8 @@ from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Company, Vacancy
-from .serializers import CompanySerializer, VacancySerializer
+from .models import Company, Vacancy, Position
+from .serializers import CompanySerializer, VacancySerializer, PositionSerializer
 
 @api_view(['GET']) # List of all companies
 def company_list(request):
@@ -54,4 +54,20 @@ def vacancy_get(request, id):
 def top_ten_vacancies(request):
     vacancies = Vacancy.objects.order_by('-salary')[:10]
     serializer = VacancySerializer(vacancies, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def position_list(request):
+    positions = Position.objects.all()
+    serializer = PositionSerializer(positions, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def position_get(request, id):
+    try:
+        position = Position.objects.get(id=id)
+    except Position.DoesNotExist:
+        return Response({"error": "Position not found"}, status=status.HTTP_404_NOT_FOUND)
+    
+    serializer = PositionSerializer(position)
     return Response(serializer.data)

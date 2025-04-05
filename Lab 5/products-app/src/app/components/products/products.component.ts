@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-products',
-  standalone: true,  // Important: This tells Angular it's a standalone component
-  imports: [CommonModule],  // <-- Add this to enable *ngFor and *ngIf
+  standalone: true,
+  imports: [CommonModule],  // Enables *ngFor and *ngIf
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })

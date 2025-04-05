@@ -1,0 +1,14 @@
+<div *ngFor="let c of companies" style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 10px; background-color: #f4f8fb;">
+    <h2 
+      (click)="showVacancies(c.id)" 
+      style="margin: 0; cursor: pointer; color: #007bff;"
+      onmouseover="this.style.color='#0056b3'" 
+      onmouseout="this.style.color='#007bff'"
+    >
+      {{ c.name }}
+    </h2>
+  
+    <div *ngIf="company_id === c.id" style="margin-top: 10px;">
+      <app-vacancy-list [companyID]="c.id"></app-vacancy-list>
+    </div>
+</div>
